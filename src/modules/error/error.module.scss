@@ -1,0 +1,23 @@
+@import "styles";
+
+.root {
+  @extend %flex-column-center;
+
+  justify-content: space-between;
+  min-height: 160px;
+}
+
+.heading {
+  @extend %flex-column-center;
+
+  row-gap: 20px;
+  margin-bottom: 68px;
+}
+
+.title {
+  @include font(40px)
+}
+
+.subtitle {
+  @include font(20px)
+}

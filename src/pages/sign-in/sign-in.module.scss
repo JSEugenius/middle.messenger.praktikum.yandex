@@ -1,0 +1,39 @@
+@import "styles";
+
+.root {
+  @extend %flex-column-center;
+
+  width: 340px;
+  min-height: 460px;
+  border-radius: 12px;
+  box-shadow: $box-shadow-small;
+  background-color: $white;
+  padding: 50px 30px 30px;
+}
+
+.title {
+  @include font(20px);
+
+  margin-bottom: 50px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.input_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.button_container {
+  @extend %flex-column-center;
+
+  gap: 14px;
+}
