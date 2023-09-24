@@ -1,0 +1,16 @@
+@import "styles";
+
+.root {
+  height: 100vh;
+  display: flex;
+}
+
+.main {
+  flex-grow: 1;
+  display: flex;
+}
+
+.sidebar {
+  flex-shrink: 1;
+  display: flex;
+}

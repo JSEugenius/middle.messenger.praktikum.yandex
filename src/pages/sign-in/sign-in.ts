@@ -1,36 +1,36 @@
-import { compileTemplate, createElement } from 'utils/handlebars-helpers.ts';
+import { createElement } from 'utils/handlebars-helpers.ts';
 import { input as inputTmpl } from 'components/input/input.tmpl.ts';
-import { tmpl as linkTmpl } from 'components/link/link.tmpl.ts';
-import { tmpl } from 'pages/sign-in/sign-in.tmpl.ts';
+import { link as linkTmpl } from 'components/link/link.tmpl.ts';
 import { button as buttonTmpl } from 'components/button/button.tmpl.ts';
 import { Layout } from 'layout/layout.ts';
+import { form } from 'modules/form/form.tmpl.ts';
 
 export const SignIn = () => {
-  const input = compileTemplate(inputTmpl);
-  const link = compileTemplate(linkTmpl);
-  const button = compileTemplate(buttonTmpl);
-
-  const content = createElement(tmpl, {
+  const content = createElement(form, {
     title: 'Вход',
-    inputLogin: input({
-      name: 'login',
-      label: 'Логин',
-      type: 'text',
-      error: 'Неверный логин или пароль',
-    }),
-    inputPassword: input({
-      name: 'password',
-      label: 'Пароль',
-      type: 'password',
-    }),
-    linkSignIn: button({
-      type: 'button',
-      text: 'Авторизоваться',
-    }),
-    linkSignUp: link({
-      to: '/500',
-      text: 'Нет аккаунта?',
-    }),
+    inputs: [
+      createElement(inputTmpl, {
+        name: 'login',
+        label: 'Логин',
+        type: 'text',
+        error: 'Неверный логин или пароль',
+      }),
+      createElement(inputTmpl, {
+        name: 'password',
+        label: 'Пароль',
+        type: 'password',
+      }),
+    ],
+    buttons: [
+      createElement(buttonTmpl, {
+        type: 'button',
+        text: 'Авторизоваться',
+      }),
+      createElement(linkTmpl, {
+        to: '/sign-up',
+        text: 'Нет аккаунта?',
+      }),
+    ],
   });
 
   return Layout(content);

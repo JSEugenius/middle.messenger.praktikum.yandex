@@ -8,7 +8,7 @@
 .input {
   @include font(13px);
 
-  font-family: 'Inter', sans-serif;
+  font-family: inherit;
   border: 0;
   border-bottom: 1px solid $blue;
   background-color: $white;
@@ -20,7 +20,7 @@
 }
 
 .label {
-  color: $grey;
+  color: $dark-grey;
   background-color: transparent;
   font-size: 16px;
   line-height: 16px;

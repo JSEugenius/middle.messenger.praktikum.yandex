@@ -14,7 +14,7 @@
 .title {
   @include font(20px);
 
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .form {
@@ -30,9 +30,11 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  margin-bottom: 48px;
 }
 
 .button_container {
+  @include font(11px);
   @extend %flex-column-center;
 
   gap: 14px;

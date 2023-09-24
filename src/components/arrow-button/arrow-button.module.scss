@@ -1,0 +1,18 @@
+@import "styles";
+
+.button {
+  margin: auto;
+  width: 28px;
+  height: 28px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.button:hover svg>circle {
+  fill: darken($blue, 2%);
+}
+
+.button:active svg>circle {
+  fill: darken($blue, 8%);
+}

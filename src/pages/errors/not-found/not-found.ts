@@ -1,8 +1,8 @@
-import { tmpl } from './not-found.tmpl';
-import { Layout } from 'layout/layout';
-import { compileTemplate, createElement } from 'utils/handlebars-helpers';
-import { errorTmpl } from 'modules/error/error.tmpl';
-import { tmpl as linkTmpl } from 'components/link/link.tmpl';
+import { tmpl } from '../error-page.tmpl.ts';
+import { Layout } from 'layout/layout.ts';
+import { compileTemplate, createElement } from 'utils/handlebars-helpers.ts';
+import { errorTmpl } from 'modules/error/error.tmpl.ts';
+import { link as linkTmpl } from 'components/link/link.tmpl.ts';
 
 export const NotFound = () => {
   const error = compileTemplate(errorTmpl);

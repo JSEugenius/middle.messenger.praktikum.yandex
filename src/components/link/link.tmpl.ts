@@ -1,6 +1,10 @@
 import style from './link.module.scss';
 
 //language=hbs
-export const tmpl = `
-  <a class="${style.root}" href="{{to}}">{{text}}</a>
+export const link = `
+    {{#if accent}}
+        <a class="${style.accent}" href="{{to}}">{{text}}</a>
+    {{else}}
+        <a class="${style.main}" href="{{to}}">{{text}}</a>
+    {{/if}}
 `;

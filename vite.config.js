@@ -4,7 +4,8 @@ import { defineConfig } from 'vite'
 export default defineConfig({
     root: resolve(__dirname, 'src'),
     build: {
-        outDir: resolve(__dirname, 'dist')
+        outDir: resolve(__dirname, 'dist'),
+        emptyOutDir: true
     },
     server: {
         port: 3000
@@ -16,6 +17,7 @@ export default defineConfig({
             'pages': resolve(__dirname, 'src/pages'),
             'layout': resolve(__dirname, 'src/layout'),
             'modules': resolve(__dirname, 'src/modules'),
+            'media': resolve(__dirname, 'src/media'),
             'styles': resolve(__dirname, 'src/styles/_styles.scss')
         }
     },

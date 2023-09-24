@@ -1,8 +1,17 @@
 @import "styles";
 
-.root {
-  font-size: 11px;
-  line-height: 11px;
-  color: $blue;
+%link-style {
   text-decoration: none;
+}
+
+.main {
+  @extend %link-style;
+
+  color: $blue;
+}
+
+.accent {
+  @extend %link-style;
+
+  color: $red;
 }

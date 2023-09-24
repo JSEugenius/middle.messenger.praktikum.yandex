@@ -26,6 +26,7 @@
       "pages/*": ["src/pages/*"],
       "layout/*": ["src/layout/*"],
       "modules/*": ["src/modules/*"],
+      "media/*": ["src/media/*"],
       "styles": ["src/styles/_styles.scss"]
     }
   },
