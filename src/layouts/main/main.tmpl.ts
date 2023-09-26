@@ -4,10 +4,10 @@ import style from './main.module.scss';
 export const tmpl = `
     <div class="${style.root}">
         <aside class="${style.sidebar}">
-            {{{sideContent}}}
+            {{{side}}}
         </aside>
         <main class="${style.main}">
-            {{{mainContent}}}
+            {{{main}}}
         </main>
     </div>
 `;

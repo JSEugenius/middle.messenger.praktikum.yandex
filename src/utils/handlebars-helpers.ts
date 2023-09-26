@@ -7,9 +7,3 @@ export const compileTemplate = (tmpl: string) => {
 export const createElement = (tmpl: string, context?: any): string => {
   return compileTemplate(tmpl)(context ?? {});
 };
-
-export const registerPartial = (name: string, partial: HandlebarsTemplateDelegate) => {
-  Handlebars.registerPartial({
-    [name]: partial,
-  });
-};

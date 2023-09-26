@@ -5,6 +5,10 @@
 
   justify-content: space-between;
   min-height: 160px;
+
+  & > a {
+    @include font(11px);
+  }
 }
 
 .heading {

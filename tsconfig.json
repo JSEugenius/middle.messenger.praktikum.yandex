@@ -24,7 +24,7 @@
       "utils/*": ["src/utils/*"],
       "components/*": ["src/components/*"],
       "pages/*": ["src/pages/*"],
-      "layout/*": ["src/layout/*"],
+      "layouts/*": ["src/layouts/*"],
       "modules/*": ["src/modules/*"],
       "media/*": ["src/media/*"],
       "styles": ["src/styles/_styles.scss"]

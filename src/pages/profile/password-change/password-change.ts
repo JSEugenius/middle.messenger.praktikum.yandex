@@ -1,6 +1,6 @@
 import { createElement } from 'utils/handlebars-helpers.ts';
 import { action, main } from './password-change.tmpl.ts';
-import { Main } from 'layout/main.ts';
+import { Main } from 'layouts/main/main.ts';
 import { arrowButton } from 'components/arrow-button/arrow-button.tmpl.ts';
 import imgSrc from 'media/empty-photo.png';
 import { avatar } from 'components/avatar/avatar.tmpl.ts';
@@ -25,5 +25,5 @@ export const PasswordChange = () => {
     button,
   });
 
-  return Main({ sideContent: side, mainContent });
+  return Main({ side: side, main: mainContent });
 };
