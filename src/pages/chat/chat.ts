@@ -4,12 +4,20 @@ import { createElement } from 'utils/handlebars-helpers.ts';
 import { chatItem as chatItemTmpl } from 'components/chat-item/chat-item.tmpl.ts';
 import { CHAT_LIST } from 'pages/chat/chat-list/chat-list.constants.ts';
 import { main } from 'pages/chat/chat-room/chat-room.tmpl.ts';
+import { messageTmpl } from 'components/message/message.tmpl.ts';
+import { MESSAGE } from 'pages/chat/chat-room/chat-room.constants.ts';
 
 export const Chat = () => {
   const chatList = CHAT_LIST.map(item =>
     createElement(chatItemTmpl, item),
   );
-  const mainContent = createElement(main);
+  const mainContent = createElement(main, {
+    title: 'Илья',
+    message: createElement(messageTmpl, {
+      message: MESSAGE,
+      time: '11:56',
+    }),
+  });
   const sideContent = createElement(side, {
     to: '/profile',
     text: 'Профиль',

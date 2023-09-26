@@ -8,7 +8,7 @@ export const chatItem = `
                 <img class="${style.avatar}" src="{{avatar}}" alt="Иконка чата" />
             {{/if}}
         </div>
-        <div>
+        <div class="${style.content}">
           <div class="${style.top_container}">
               <h2 class="${style.title}">{{title}}</h2>
               <time class="${style.time}">{{time}}</time>
