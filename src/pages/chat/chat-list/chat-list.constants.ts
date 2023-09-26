@@ -1,10 +1,12 @@
+import avatarSrc from 'media/my-avatar.jpg';
+
 export const CHAT_LIST = [
   {
     title: 'Илья',
     time: '15:12',
     message: 'Друзья, у меня для вас особенный выпуск новостей!',
     count: 4,
-    avatar: 'media/my-avatar.jpg',
+    avatar: avatarSrc,
   },
   {
     title: 'Илья',
