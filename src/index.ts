@@ -5,11 +5,13 @@ import { SignIn } from 'pages/sign-in/sign-in.ts';
 import { SignUp } from 'pages/sign-up/sign-up.ts';
 import { ProfileChange } from 'pages/profile/profile-change/profile-change.ts';
 import { PasswordChange } from 'pages/profile/password-change/password-change.ts';
+import { Chat } from 'pages/chat/chat.ts';
 
 const ROUTES = {
   '/': SignIn(),
   '/sign-in': SignIn(),
   '/sign-up': SignUp(),
+  '/chat': Chat(),
   '/profile': PersonalInfo(),
   '/profile-change': ProfileChange(),
   '/password-change': PasswordChange(),

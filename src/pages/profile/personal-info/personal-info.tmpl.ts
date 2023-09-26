@@ -11,7 +11,7 @@ export const main = `
             {{#each profileInfo}}
                 <li class="${style.field} ${style.list_item}">
                     <label for="{{name}}">{{title}}</label>
-                    <input value="{{value}}" class="${style.info_value}" readonly />
+                    <input value="{{value}}" class="${style.info_input}" readonly />
                 </li>
             {{/each}}
         </ul>

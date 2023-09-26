@@ -1,4 +1,4 @@
-import style from './layout.module.scss';
+import style from './centered.module.scss';
 
 //language=hbs
 export const tmpl = `

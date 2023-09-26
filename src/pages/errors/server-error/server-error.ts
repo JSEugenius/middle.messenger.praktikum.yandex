@@ -1,5 +1,5 @@
 import { tmpl } from '../error-page.tmpl.ts';
-import { Layout } from 'layout/layout.ts';
+import { Centered } from 'layouts/centered/centered.ts';
 import { compileTemplate, createElement } from 'utils/handlebars-helpers.ts';
 import { errorTmpl } from 'modules/error/error.tmpl.ts';
 import { link as linkTmpl } from 'components/link/link.tmpl.ts';
@@ -18,5 +18,5 @@ export const ServerError = () => {
       }),
     }),
   });
-  return Layout(content);
+  return Centered(content);
 };

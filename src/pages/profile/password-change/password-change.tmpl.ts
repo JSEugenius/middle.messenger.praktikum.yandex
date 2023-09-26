@@ -11,7 +11,7 @@ export const main = `
             {{#each passwordItems}}
                 <li class="${style.field} ${style.list_item}">
                     <label for="{{name}}">{{title}}</label>
-                    <input type="password" class="${style.info_value}" id="{{name}}" name="{{name}}" value="{{value}}" />
+                    <input type="password" class="${style.info_input}" id="{{name}}" name="{{name}}" value="{{value}}" />
                 </li>
             {{/each}}
         </ul>

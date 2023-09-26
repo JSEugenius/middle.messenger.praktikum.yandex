@@ -15,7 +15,7 @@ export default defineConfig({
             'utils': resolve(__dirname, 'src/utils'),
             'components': resolve(__dirname, 'src/components'),
             'pages': resolve(__dirname, 'src/pages'),
-            'layout': resolve(__dirname, 'src/layout'),
+            'layouts': resolve(__dirname, 'src/layouts'),
             'modules': resolve(__dirname, 'src/modules'),
             'media': resolve(__dirname, 'src/media'),
             'styles': resolve(__dirname, 'src/styles/_styles.scss')

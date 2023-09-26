@@ -1,6 +1,6 @@
 import { createElement } from 'utils/handlebars-helpers.ts';
 import { action, main } from 'pages/profile/personal-info/personal-info.tmpl.ts';
-import { Main } from 'layout/main.ts';
+import { Main } from 'layouts/main/main.ts';
 import { arrowButton } from 'components/arrow-button/arrow-button.tmpl.ts';
 import imgSrc from 'media/empty-photo.png';
 import { link } from 'components/link/link.tmpl.ts';
@@ -24,5 +24,5 @@ export const PersonalInfo = () => {
     buttons,
   });
 
-  return Main({ sideContent: side, mainContent });
+  return Main({ side: side, main: mainContent });
 };
