@@ -1,7 +1,7 @@
 import style from './chat-item.module.scss';
 
 //language=hbs
-export const chatItem = `
+export const chatItemTmpl = `
     <div class="${style.root}">
         <div class="${style.avatar_container}">
             {{#if avatar}}

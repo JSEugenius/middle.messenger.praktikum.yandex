@@ -3,7 +3,7 @@ import searchSrc from 'media/search-icon.svg';
 import arrowSrc from 'media/arrow-right.svg';
 
 //language=hbs
-export const side = `
+export const chatListTmpl = `
     <div class="${style.root}">
         <div class="${style.side_header}">
             <a class="${style.link}" href="{{to}}">

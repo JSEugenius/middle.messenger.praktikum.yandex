@@ -1,13 +1,20 @@
 @import "styles";
 
+%time-position {
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+}
+
 .root {
   font-size: 12px;
   line-height: 15px;
   padding: 12px 12px 18px;
-  width: 402px;
+  max-width: 402px;
   background-color: $light-grey;
   border-radius: 0 12px 12px 12px;
   position: relative;
+  min-width: 114px;
 
   &_own {
     background-color: $light-blue;
@@ -17,13 +24,39 @@
 
 .time {
   @include font(9px);
+  @extend %time-position;
 
   color: $dark-grey;
-  position: absolute;
-  bottom: 8px;
-  right: 10px;
 
   &_own {
     color: $blue;
   }
+
+  &_img {
+    position: static;
+    color: $white;
+    vertical-align: middle;
+  }
+}
+
+.img_container {
+  border: $border;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  max-width: 316px;
+}
+
+.img {
+  width: 100%;
+}
+
+.overlay {
+  @extend %time-position;
+  @include font(9px);
+
+  opacity: 0.5;
+  background-color: $very-dark-grey;
+  border-radius: 30px;
+  padding: 2px 7px;
 }

@@ -1,11 +1,9 @@
-import { createElement } from 'utils/handlebars-helpers.ts';
-import { tmpl } from './main.tmpl.ts';
+import { createElement } from 'utils/create-element.ts';
+import { mainLayoutTmpl } from './main.tmpl.ts';
 
-interface IMain {
+export const Main = ({ side, main }: {
   side: string;
   main: string;
-}
-
-export const Main = ({ side, main }: IMain) => {
-  return createElement(tmpl, { side, main });
+}) => {
+  return createElement(mainLayoutTmpl, { side, main });
 };

@@ -1,7 +1,7 @@
 import style from './avatar.module.scss';
 
 //language=hbs
-export const avatar = `
+export const avatarTmpl = `
   <div class="${style.avatar}">
       <label>
           <input name="avatar" class="${style.input}" type="file" />

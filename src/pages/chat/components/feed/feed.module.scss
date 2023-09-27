@@ -1,0 +1,24 @@
+.root {
+  display: flex;
+  flex-direction: column-reverse;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+.feed {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 10px;
+}
+
+.message {
+  align-self: start;
+
+  &_own {
+    align-self: end;
+  }
+}

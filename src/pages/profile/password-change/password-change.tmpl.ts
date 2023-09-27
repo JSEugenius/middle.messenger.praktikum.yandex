@@ -1,7 +1,7 @@
 import style from '../profile.module.scss';
 
 //language=hbs
-export const main = `
+export const passwordChangeTmpl = `
     <div class="${style.main}">
         <div class="${style.heading}">
             {{{avatar}}}
@@ -22,7 +22,7 @@ export const main = `
 `;
 
 //language=hbs
-export const action = `
+export const actionTmpl = `
     <div class="${style.side}">
         {{{button}}}
     </div>

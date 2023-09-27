@@ -1,22 +1,22 @@
-import { tmpl } from '../error-page.tmpl.ts';
+import { errorPageTmpl } from '../error-page.tmpl.ts';
 import { Centered } from 'layouts/centered/centered.ts';
-import { compileTemplate, createElement } from 'utils/handlebars-helpers.ts';
+import { createElement } from 'utils/create-element.ts';
 import { errorTmpl } from 'modules/error/error.tmpl.ts';
-import { link as linkTmpl } from 'components/link/link.tmpl.ts';
+import { linkTmpl } from 'components/link/link.tmpl.ts';
 
 export const ServerError = () => {
-  const error = compileTemplate(errorTmpl);
-  const link = compileTemplate(linkTmpl);
-
-  const content = createElement(tmpl, {
-    error: error({
-      code: '500',
-      description: 'Мы уже фиксим',
-      link: link({
-        to: '/404',
-        text: 'Назад к чатам',
-      }),
-    }),
+  const link = createElement(linkTmpl, {
+    to: '/chat',
+    text: 'Назад к чатам',
   });
+
+  const error = createElement(errorTmpl, {
+    code: '500',
+    description: 'Мы уже фиксим',
+    link,
+  });
+
+  const content = createElement(errorPageTmpl, { error });
+
   return Centered(content);
 };
