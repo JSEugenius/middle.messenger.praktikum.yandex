@@ -1,12 +1,12 @@
-import { createElement } from 'utils/handlebars-helpers.ts';
-import { input as inputTmpl } from 'components/input/input.tmpl.ts';
-import { link as linkTmpl } from 'components/link/link.tmpl.ts';
-import { button as buttonTmpl } from 'components/button/button.tmpl.ts';
+import { createElement } from 'utils/create-element.ts';
+import { inputTmpl as inputTmpl } from 'components/input/input.tmpl.ts';
+import { linkTmpl as linkTmpl } from 'components/link/link.tmpl.ts';
+import { buttonTmpl as buttonTmpl } from 'components/button/button.tmpl.ts';
 import { Centered } from 'layouts/centered/centered.ts';
-import { form } from 'modules/form/form.tmpl.ts';
+import { formTmpl } from 'modules/form/form.tmpl.ts';
 
 export const SignIn = () => {
-  const content = createElement(form, {
+  const content = createElement(formTmpl, {
     title: 'Вход',
     inputs: [
       createElement(inputTmpl, {

@@ -1,6 +1,6 @@
-import { createElement } from 'utils/handlebars-helpers.ts';
-import { tmpl } from './centered.tmpl.ts';
+import { createElement } from 'utils/create-element.ts';
+import { centeredLayout } from './centered.tmpl.ts';
 
 export const Centered = (content: string) => {
-  return createElement(tmpl, { content });
+  return createElement(centeredLayout, { content });
 };

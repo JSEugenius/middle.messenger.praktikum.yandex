@@ -1,4 +1,4 @@
 //language=hbs
-export const tmpl = `
+export const errorPageTmpl = `
     {{{error}}}
 `;

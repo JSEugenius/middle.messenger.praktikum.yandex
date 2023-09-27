@@ -1,0 +1,48 @@
+@import "styles";
+
+.actions {
+  height: 54px;
+  border-top: $border;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+
+.clip_button {
+  display: flex;
+  align-items: center;
+
+  & > svg > g {
+    fill: $blue
+  }
+}
+
+.submit_button {
+  display: flex;
+  align-items: center;
+
+  button {
+    transform: scale(-1, 1);
+  }
+}
+
+.input {
+  @include font(12px);
+
+  font-family: inherit;
+  border: 0;
+  color: $black;
+  width: 100%;
+  background-color: $light-grey;
+  border-radius: 30px;
+  padding: 10px 20px;
+
+  &:focus {
+    outline: $input-outline;
+  }
+
+  &::placeholder {
+    color: $dark-grey;
+  }
+}
