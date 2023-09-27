@@ -14,7 +14,7 @@
 - [Авторизация](https://jseugenius-messenger.netlify.app/sign-in)
 - [Регистрация](https://jseugenius-messenger.netlify.app/sign-up)
 - [Профиль](https://jseugenius-messenger.netlify.app/profile)
-- [Изменением пароля](https://jseugenius-messenger.netlify.app/password-change)
+- [Изменение пароля](https://jseugenius-messenger.netlify.app/password-change)
 - [Изменение данных профиля](https://jseugenius-messenger.netlify.app/profile-change)
 - [Чат](https://jseugenius-messenger.netlify.app/chat)
 - [Страница с 404 ошибкой](https://jseugenius-messenger.netlify.app/404)
