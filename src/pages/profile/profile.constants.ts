@@ -22,7 +22,7 @@ export const PROFILE_INFO_ITEMS = [
   {
     title: 'Имя в чате',
     value: 'Иван',
-    name: 'nickname',
+    name: 'display_name',
   },
   {
     title: 'Телефон',
