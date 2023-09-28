@@ -1,0 +1,21 @@
+@import "styles";
+
+.root {
+  height: 100vh;
+  display: flex;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.main {
+  flex-grow: 1;
+  display: flex;
+  border-right: $border;
+}
+
+.sidebar {
+  flex-shrink: 1;
+  display: flex;
+  border-right: $border;
+  border-left: $border;
+}

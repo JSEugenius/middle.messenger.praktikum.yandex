@@ -1,0 +1,61 @@
+@import "styles";
+
+.avatar_container {
+  text-align: center;
+}
+
+.input {
+  display: none;
+}
+
+.personal_container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.avatar_img {
+  cursor: pointer;
+  width: 120px;
+  height: 120px;
+  box-sizing: border-box;
+  border-radius: 100%;
+  transition: all ease-in-out .2s;
+}
+
+.avatar_img:hover {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+.upload_container {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  width: inherit;
+  height: inherit;
+  border-radius: 100%;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0);
+  transition: all ease-in-out .2s;
+  display: flex;
+}
+
+.upload_content {
+  @include font(13px);
+
+  color: $white;
+  width: 64px;
+  margin: auto;
+  text-align: center;
+}
+
+.upload_container:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.upload_container > img {
+  margin-top: 32.5px;
+  width: 50px;
+  height: 50px;
+}

@@ -1,0 +1,17 @@
+@import "styles";
+
+%link-style {
+  text-decoration: none;
+}
+
+.main {
+  @extend %link-style;
+
+  color: $blue;
+}
+
+.accent {
+  @extend %link-style;
+
+  color: $red;
+}

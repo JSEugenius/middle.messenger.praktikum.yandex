@@ -1,0 +1,24 @@
+@import "styles";
+
+.button {
+  @include font(13px);
+
+  color: $white;
+  background-color: $blue;
+  border: 0;
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  width: 100%;
+  transition: .1s ease-out transform;
+
+  &:hover {
+    background-color: darken($blue, 2%);
+  }
+
+  &:active {
+    background-color: darken($blue, 8%);
+  }
+}
