@@ -1,9 +1,6 @@
 import Handlebars from 'handlebars';
 
-const compileTemplate = (tmpl: string) => {
-  return Handlebars.compile(tmpl);
-};
+const compileTemplate = (tmpl: string) => Handlebars.compile(tmpl);
 
-export const createElement = (tmpl: string, context?: any): string => {
-  return compileTemplate(tmpl)(context ?? {});
-};
+// eslint-disable-next-line max-len
+export const createElement = (tmpl: string, context?: any): string => compileTemplate(tmpl)(context ?? {});

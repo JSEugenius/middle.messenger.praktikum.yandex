@@ -1,10 +1,10 @@
-import { Main } from 'layouts/main/main.ts';
-import { createElement } from 'utils/create-element.ts';
-import { actionTmpl, passwordChangeTmpl } from './password-change.tmpl.ts';
-import { arrowButtonTmpl } from 'components/arrow-button/arrow-button.tmpl.ts';
-import { avatarTmpl } from 'components/avatar/avatar.tmpl.ts';
-import { PASSWORD_ITEMS } from '../profile.constants.ts';
-import { buttonTmpl } from 'components/button/button.tmpl.ts';
+import { Main } from 'layouts/main/main';
+import { createElement } from 'utils/create-element';
+import { arrowButtonTmpl } from 'components/arrow-button/arrow-button.tmpl';
+import { avatarTmpl } from 'components/avatar/avatar.tmpl';
+import { buttonTmpl } from 'components/button/button.tmpl';
+import { PASSWORD_ITEMS } from 'pages/profile/profile.constants';
+import { actionTmpl, passwordChangeTmpl } from 'pages/profile/password-change/password-change.tmpl';
 import imgSrc from 'media/empty-photo.png';
 
 export const PasswordChange = () => {

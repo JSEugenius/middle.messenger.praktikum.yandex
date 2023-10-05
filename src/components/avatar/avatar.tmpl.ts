@@ -1,6 +1,6 @@
 import style from './avatar.module.scss';
 
-//language=hbs
+// language=hbs
 export const avatarTmpl = `
   <div class="${style.avatar}">
       <label>

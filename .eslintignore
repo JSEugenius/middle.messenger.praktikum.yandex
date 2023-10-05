@@ -1,2 +1,5 @@
 *.config.js
-.eslintrc.cjs
+.eslintrc
+dist
+node_modules
+.github

@@ -1,6 +1,6 @@
 import style from '../profile.module.scss';
 
-//language=hbs
+// language=hbs
 export const main = `
     <div class="${style.main}">
         <div class="${style.heading}">
@@ -23,7 +23,7 @@ export const main = `
     </div>
 `;
 
-//language=hbs
+// language=hbs
 export const action = `
     <div class="${style.side}">
         {{{button}}}

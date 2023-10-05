@@ -1,6 +1,6 @@
 import style from './message.module.scss';
 
-//language=hbs
+// language=hbs
 export const messageTmpl = `
     {{#if own}}
         <div class="${style.root} ${style.root_own}">
@@ -15,7 +15,7 @@ export const messageTmpl = `
     {{/if}}
 `;
 
-//language=hbs
+// language=hbs
 export const messageWithImg = `
     <div class="${style.img_container}">
         <img class="${style.img}" src="{{imgSrc}}" alt="Фотография" />

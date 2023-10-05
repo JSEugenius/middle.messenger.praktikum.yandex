@@ -1,6 +1,6 @@
 import style from './header.module.scss';
 
-//language=hbs
+// language=hbs
 export const headerTmpl = `
     <div class="${style.header}">
         <div class="${style.chat_info}">

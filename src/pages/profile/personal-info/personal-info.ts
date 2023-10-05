@@ -1,11 +1,11 @@
-import { createElement } from 'utils/create-element.ts';
-import { action, main } from 'pages/profile/personal-info/personal-info.tmpl.ts';
-import { Main } from 'layouts/main/main.ts';
-import { arrowButtonTmpl } from 'components/arrow-button/arrow-button.tmpl.ts';
-import { linkTmpl } from 'components/link/link.tmpl.ts';
-import { avatarTmpl } from 'components/avatar/avatar.tmpl.ts';
-import { LINKS, PROFILE_INFO_ITEMS } from '../profile.constants.ts';
+import { createElement } from 'utils/create-element';
+import { action, main } from 'pages/profile/personal-info/personal-info.tmpl';
+import { Main } from 'layouts/main/main';
+import { arrowButtonTmpl } from 'components/arrow-button/arrow-button.tmpl';
+import { linkTmpl } from 'components/link/link.tmpl';
+import { avatarTmpl } from 'components/avatar/avatar.tmpl';
 import imgSrc from 'media/empty-photo.png';
+import { LINKS, PROFILE_INFO_ITEMS } from 'pages/profile/profile.constants';
 
 export const PersonalInfo = () => {
   const buttonArrow = createElement(arrowButtonTmpl);
@@ -13,9 +13,7 @@ export const PersonalInfo = () => {
     button: buttonArrow,
   });
 
-  const buttons = LINKS.map(item => {
-    return createElement(linkTmpl, item);
-  });
+  const buttons = LINKS.map((item) => createElement(linkTmpl, item));
 
   const mainContent = createElement(main, {
     avatar: createElement(avatarTmpl, { imgSrc }),
@@ -24,5 +22,5 @@ export const PersonalInfo = () => {
     buttons,
   });
 
-  return Main({ side: side, main: mainContent });
+  return Main({ side, main: mainContent });
 };

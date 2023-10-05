@@ -1,6 +1,6 @@
 import style from './form.module.scss';
 
-//language=hbs
+// language=hbs
 export const formTmpl = `
     <article class="${style.root}">
         <h1 class="${style.title}">{{title}}</h1>

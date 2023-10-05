@@ -1,5 +1,5 @@
 import style from './input.module.scss';
-//language=hbs
+// language=hbs
 export const inputTmpl = `
     <div class="${style.container}">
         <input class="${style.input}" id="{{name}}" name="{{name}}" type="{{type}}" placeholder=" " />

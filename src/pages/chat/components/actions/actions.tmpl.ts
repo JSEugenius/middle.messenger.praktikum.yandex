@@ -1,6 +1,6 @@
 import style from './actions.module.scss';
 
-//language=hbs
+// language=hbs
 export const actionsTmpl = `
     <form class="${style.actions}">
         <div class="${style.clip_button}">

@@ -1,19 +1,19 @@
-import { Main } from 'layouts/main/main.ts';
-import { createElement } from 'utils/create-element.ts';
-import { chatListTmpl } from 'pages/chat/chat-list/chat-list.tmpl.ts';
-import { chatRoomTmpl } from 'pages/chat/chat-room/chat-room.tmpl.ts';
-import { chatItemTmpl } from 'components/chat-item/chat-item.tmpl.ts';
-import { CHAT_LIST } from 'pages/chat/chat-list/chat-list.constants.ts';
-import { messageTmpl, messageWithImg } from 'components/message/message.tmpl.ts';
-import { MESSAGES } from 'pages/chat/chat-room/chat-room.constants.ts';
-import { arrowButtonTmpl } from 'components/arrow-button/arrow-button.tmpl.ts';
-import { headerTmpl } from 'pages/chat/components/header/header.tmpl.ts';
-import { feedTmpl } from 'pages/chat/components/feed/feed.tmpl.ts';
-import { actionsTmpl } from 'pages/chat/components/actions/actions.tmpl.ts';
+import { Main } from 'layouts/main/main';
+import { createElement } from 'utils/create-element';
+import { chatListTmpl } from 'pages/chat/chat-list/chat-list.tmpl';
+import { chatRoomTmpl } from 'pages/chat/chat-room/chat-room.tmpl';
+import { chatItemTmpl } from 'components/chat-item/chat-item.tmpl';
+import { CHAT_LIST } from 'pages/chat/chat-list/chat-list.constants';
+import { messageTmpl, messageWithImg } from 'components/message/message.tmpl';
+import { MESSAGES } from 'pages/chat/chat-room/chat-room.constants';
+import { arrowButtonTmpl } from 'components/arrow-button/arrow-button.tmpl';
+import { headerTmpl } from 'pages/chat/components/header/header.tmpl';
+import { feedTmpl } from 'pages/chat/components/feed/feed.tmpl';
+import { actionsTmpl } from 'pages/chat/components/actions/actions.tmpl';
 import avatarSrc from 'media/my-avatar.jpg';
 
 export const Chat = () => {
-  const messages = MESSAGES.map(item => {
+  const messages = MESSAGES.map((item) => {
     if (item.imgSrc) {
       return {
         content: createElement(messageWithImg, item),
@@ -26,9 +26,7 @@ export const Chat = () => {
     };
   });
 
-  const chatList = CHAT_LIST.map(item =>
-    createElement(chatItemTmpl, item),
-  );
+  const chatList = CHAT_LIST.map((item) => createElement(chatItemTmpl, item));
 
   const header = createElement(headerTmpl, {
     avatar: avatarSrc,

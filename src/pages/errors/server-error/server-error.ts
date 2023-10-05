@@ -1,8 +1,8 @@
-import { errorPageTmpl } from '../error-page.tmpl.ts';
-import { Centered } from 'layouts/centered/centered.ts';
-import { createElement } from 'utils/create-element.ts';
-import { errorTmpl } from 'modules/error/error.tmpl.ts';
-import { linkTmpl } from 'components/link/link.tmpl.ts';
+import { Centered } from 'layouts/centered/centered';
+import { createElement } from 'utils/create-element';
+import { errorTmpl } from 'modules/error/error.tmpl';
+import { linkTmpl } from 'components/link/link.tmpl';
+import { errorPageTmpl } from 'pages/errors/error-page.tmpl';
 
 export const ServerError = () => {
   const link = createElement(linkTmpl, {

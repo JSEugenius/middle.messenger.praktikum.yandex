@@ -1,9 +1,7 @@
-import { createElement } from 'utils/create-element.ts';
-import { mainLayoutTmpl } from './main.tmpl.ts';
+import { createElement } from 'utils/create-element';
+import { mainLayoutTmpl } from 'layouts/main/main.tmpl';
 
 export const Main = ({ side, main }: {
   side: string;
   main: string;
-}) => {
-  return createElement(mainLayoutTmpl, { side, main });
-};
+}) => createElement(mainLayoutTmpl, { side, main });

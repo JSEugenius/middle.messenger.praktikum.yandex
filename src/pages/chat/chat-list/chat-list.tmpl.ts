@@ -1,8 +1,8 @@
-import style from './chat-list.module.scss';
 import searchSrc from 'media/search-icon.svg';
 import arrowSrc from 'media/arrow-right.svg';
+import style from './chat-list.module.scss';
 
-//language=hbs
+// language=hbs
 export const chatListTmpl = `
     <div class="${style.root}">
         <div class="${style.side_header}">

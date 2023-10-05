@@ -1,6 +1,6 @@
 import style from '../profile.module.scss';
 
-//language=hbs
+// language=hbs
 export const passwordChangeTmpl = `
     <div class="${style.main}">
         <div class="${style.heading}">
@@ -23,7 +23,7 @@ export const passwordChangeTmpl = `
     </div>
 `;
 
-//language=hbs
+// language=hbs
 export const actionTmpl = `
     <div class="${style.side}">
         {{{button}}}
