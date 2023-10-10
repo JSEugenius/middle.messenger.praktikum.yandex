@@ -6,6 +6,8 @@ import { SignUp } from 'pages/sign-up/sign-up';
 import { ProfileChange } from 'pages/profile/profile-change/profile-change';
 import { PasswordChange } from 'pages/profile/password-change/password-change';
 import { Chat } from 'pages/chat/chat';
+import { renderDOM } from 'utils/render-dom';
+import { Button } from 'components/button/button';
 
 const ROUTES = {
   '/': SignIn(),
@@ -19,10 +21,33 @@ const ROUTES = {
   '/500': ServerError(),
 };
 window.addEventListener('DOMContentLoaded', () => {
-  const root = document.getElementById('app');
+  // const root = document.getElementById('app');
 
-  if (root) {
-    const path = window.location.pathname as keyof typeof ROUTES;
-    root.innerHTML = ROUTES[path];
-  }
+  // if (root) {
+  //   const path = window.location.pathname as keyof typeof ROUTES;
+  //   root.innerHTML = ROUTES[path];
+  // }
+
+  const button = new Button({
+    type: 'submit',
+    text: 'Click me',
+    events: {
+      click: (event) => {
+        console.log(event);
+      },
+    },
+  });
+
+  renderDOM('#app', button);
+
+  setTimeout(() => {
+    button.setProps({
+      text: 'Click me, please',
+      events: {
+        click: (event) => {
+          console.log(event);
+        },
+      },
+    });
+  }, 1000);
 });
