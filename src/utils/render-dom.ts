@@ -1,4 +1,4 @@
-import { Block } from '../classes/block';
+import { Block } from 'classes/block';
 
 export const renderDOM = (query: string, block: Block) => {
   const root = document.querySelector(query);

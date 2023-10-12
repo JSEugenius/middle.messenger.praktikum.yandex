@@ -15,6 +15,10 @@ import { chatItemTmpl } from 'components/chat-item/chat-item.tmpl';
 import { MESSAGES } from 'pages/chat/chat-room/chat-room.constants';
 import { messageTmpl, messageWithImg } from 'components/message/message.tmpl';
 import { Message, TMessage } from 'components/message/message';
+import { NotFound } from 'pages/errors/not-found/not-found';
+import { Errors } from 'pages/errors/errors';
+import { Link } from 'components/link/link';
+import { ErrorModule } from 'modules/error/error';
 
 const ROUTES = {
   // '/': SignIn(),
@@ -24,18 +28,41 @@ const ROUTES = {
   // '/profile': PersonalInfo(),
   // '/profile-change': ProfileChange(),
   // '/password-change': PasswordChange(),
-  // '/404': notFountPage,
+  '/404': NotFound(),
   // '/': notFountPage,
   // '/500': ServerError(),
 };
 
 window.addEventListener('DOMContentLoaded', () => {
-  //   const path = window.location.pathname as keyof typeof ROUTES;
+  // const path = window.location.pathname as keyof typeof ROUTES;
   //   renderDOM('#app', ROUTES[path]);
 
-  const messages = MESSAGES.map((item) => new Message(item as TMessage));
+  // const messages = MESSAGES.map((item) => new Message(item as TMessage));
 
-  const feed = new Feed({ messages });
+  // const error = new Errors({
+  //   code: '404',
+  //   description: 'Не туда попали',
+  //   link: {
+  //     to: '/chat',
+  //     text: 'Вернуться к чатам',
+  //   },
+  // });
 
-  renderDOM('#app', feed);
+  // const feed = new Feed({ messages });
+
+  // const link = new Link({
+  //   to: '/chat',
+  //   text: 'Вернуться к чатам',
+  // });
+
+  const error = new ErrorModule({
+    link: {
+      to: '/chat',
+      text: 'Вернуться к чатам',
+    },
+    description: 'Не туда попали',
+    code: '404',
+  });
+
+  renderDOM('#app', error);
 });
