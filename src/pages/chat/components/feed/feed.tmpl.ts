@@ -5,9 +5,7 @@ export const feedTmpl = `
     <div class="${style.root}">
         <ul class="${style.feed}">
             {{#each messages}}
-                <li class="${style.message}">
-                    {{{.}}}
-                </li>
+                {{{this}}}
             {{/each}}
         </ul>
     </div>

@@ -216,7 +216,7 @@ export class Block<P extends Record<string, any> = any> {
 
         child.forEach((item) => {
           const stub = this._createStub(item);
-          (propsAndStubs[key] as unknown[]).push(stub);
+          (propsAndStubs[key] as string[]).push(stub);
         });
       } else {
         propsAndStubs[key] = this._createStub(child);
@@ -229,10 +229,10 @@ export class Block<P extends Record<string, any> = any> {
     Object.values(this.children).forEach((child) => {
       if (Array.isArray(child)) {
         child.forEach((item) => {
-          this._replaceStubs(fragment, item);
+          this._replaceStub(fragment, item);
         });
       } else {
-        this._replaceStubs(fragment, child);
+        this._replaceStub(fragment, child);
       }
     });
 
@@ -245,7 +245,7 @@ export class Block<P extends Record<string, any> = any> {
   }
 
   /** =========================================================================================== */
-  _replaceStubs(fragment: HTMLTemplateElement, child: Block) {
+  _replaceStub(fragment: HTMLTemplateElement, child: Block) {
     const stub = fragment.content.querySelector(`[data-id="${child._id}"]`);
     if (stub) {
       stub.replaceWith(child.getContent()!);
