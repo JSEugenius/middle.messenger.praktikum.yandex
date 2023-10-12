@@ -19,6 +19,7 @@
     "paths": {
       "utils/*": ["src/utils/*"],
       "components/*": ["src/components/*"],
+      "classes/*": ["src/classes/*"],
       "pages/*": ["src/pages/*"],
       "layouts/*": ["src/layouts/*"],
       "modules/*": ["src/modules/*"],

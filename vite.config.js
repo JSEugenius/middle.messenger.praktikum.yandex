@@ -14,6 +14,7 @@ export default defineConfig({
         alias: {
             'utils': resolve(__dirname, 'src/utils'),
             'components': resolve(__dirname, 'src/components'),
+            'classes': resolve(__dirname, 'src/classes'),
             'pages': resolve(__dirname, 'src/pages'),
             'layouts': resolve(__dirname, 'src/layouts'),
             'modules': resolve(__dirname, 'src/modules'),

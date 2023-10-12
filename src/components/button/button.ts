@@ -1,9 +1,20 @@
 import { buttonTmpl } from 'components/button/button.tmpl';
-import { Block } from '../../classes/block';
+import { Block } from 'classes/block';
 
-export class Button extends Block<any> {
-  constructor(props: any) {
-    super('button', props);
+type TButton = {
+  text: string;
+  type?: 'submit' | 'reset' | 'button' | undefined;
+  events?: {
+    click: () => void
+  }
+};
+
+export class Button extends Block<TButton> {
+  constructor(props: TButton) {
+    super({
+      ...props,
+      type: props.type || 'button',
+    });
   }
 
   render() {

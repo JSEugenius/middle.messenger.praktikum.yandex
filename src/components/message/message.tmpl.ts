@@ -7,7 +7,7 @@ export const messageTmpl = `
             <p class="${style.message}">{{text}}</p>
             <time class="${style.time} ${style.time_own}">{{time}}</time>
         </div>
-        {{else}}
+    {{else}}
         <div class="${style.root}">
             <p class="${style.message}">{{text}}</p>
             <time class="${style.time}">{{time}}</time>
