@@ -13,9 +13,7 @@ export type TErrorModule = {
 };
 
 export class ErrorModule extends Block<TErrorModule> {
-  constructor(props: TErrorModule) {
-    super(props);
-
+  init() {
     this.children.link = new Link({
       text: this.props.link.text,
       to: this.props.link.to,

@@ -1,34 +1,11 @@
-import { Block } from 'classes/block';
-import { ErrorModule, TErrorModule } from 'modules/error/error';
-import { errorPageTmpl } from 'pages/errors/error-page.tmpl';
+import { ErrorModule } from 'modules/error/error';
+import { CenteredLayout } from 'layouts/centered/centered2';
+import { ERRORS_PROPS } from 'pages/errors/errors.constants';
 
-type TErrors = {
-  error: Block
-} & TErrorModule;
+export const ErrorPage = (code: keyof typeof ERRORS_PROPS) => {
+  const props = ERRORS_PROPS[code];
 
-export class Errors extends Block<TErrors> {
-  constructor(props: TErrors) {
-    super(props);
-  }
+  const content = new ErrorModule(props);
 
-  protected render(): DocumentFragment {
-    this.children.error = new ErrorModule({
-      code: this.props.code,
-      description: this.props.description,
-      link: {
-        to: this.props.link.to,
-        text: this.props.link.text,
-      },
-    });
-
-    return this.compile(errorPageTmpl, {
-      code: this.props.code,
-      description: this.props.description,
-      link: {
-        to: this.props.link.to,
-        text: this.props.link.text,
-      },
-      error: this.children.error,
-    });
-  }
-}
+  return new CenteredLayout({ content });
+};

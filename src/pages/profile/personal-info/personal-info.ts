@@ -13,13 +13,13 @@ export const PersonalInfo = () => {
     button: buttonArrow,
   });
 
-  const buttons = LINKS.map((item) => createElement(linkTmpl, item));
+  const links = LINKS.map((item) => createElement(linkTmpl, item));
 
   const mainContent = createElement(main, {
     avatar: createElement(avatarTmpl, { imgSrc }),
     firstName: 'Иван',
     profileInfo: PROFILE_INFO_ITEMS,
-    buttons,
+    links,
   });
 
   return Main({ side, main: mainContent });

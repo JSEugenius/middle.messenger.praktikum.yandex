@@ -16,7 +16,7 @@ export const main = `
             {{/each}}
         </ul>
         <div class="${style.buttons_container}">
-            {{#each buttons}}
+            {{#each links}}
                 <div class="${style.field}">
                     {{{.}}}
                 </div>

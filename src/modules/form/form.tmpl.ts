@@ -11,9 +11,8 @@ export const formTmpl = `
                 {{/each}}
             </div>
             <div class="${style.button_container}">
-                {{#each buttons}}
-                    {{{.}}}
-                {{/each}}
+                {{{button}}}
+                {{{link}}}
             </div>
         </form>
     </article>

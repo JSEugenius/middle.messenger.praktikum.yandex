@@ -47,7 +47,7 @@ export class Block<P extends Record<string, any> = any> {
 
   /** =========================================================================================== */
   _registerEvent(eventbus: BlockEventBus) {
-    eventbus.on(BlockEvents.INIT, this.init.bind(this));
+    eventbus.on(BlockEvents.INIT, this._init.bind(this));
     eventbus.on(BlockEvents.FLOW_CDM, this._componentDidMount.bind(this));
     eventbus.on(BlockEvents.FLOW_CDU, this._componentDidUpdate.bind(this));
     eventbus.on(BlockEvents.FLOW_RENDER, this._render.bind(this));
@@ -96,7 +96,11 @@ export class Block<P extends Record<string, any> = any> {
   }
 
   /** =========================================================================================== */
-  init() {
+  protected init() {}
+
+  /** =========================================================================================== */
+  private _init() {
+    this.init();
     this.eventBus().emit(BlockEvents.FLOW_RENDER);
   }
 
