@@ -14,7 +14,7 @@ export const actionsTmpl = `
         </div>
         <input class="${style.input}" type="text" name="message" placeholder="Сообщение">
         <div class="${style.submit_button}">
-            {{{submitButton}}}
+            {{{button}}}
         </div>
     </form>
 `;

@@ -2,7 +2,7 @@ import style from './chat-item.module.scss';
 
 // language=hbs
 export const chatItemTmpl = `
-    <div class="${style.root}">
+    <li class="${style.root} {{wrapperClassName}}">
         <div class="${style.avatar_container}">
             {{#if avatar}}
                 <img class="${style.avatar}" src="{{avatar}}" alt="Иконка чата" />
@@ -24,5 +24,5 @@ export const chatItemTmpl = `
               {{/if}}
           </div>
         </div>
-    </div>
+    </li>
 `;

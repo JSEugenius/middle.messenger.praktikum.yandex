@@ -3,12 +3,13 @@ import { ErrorPage } from 'pages/errors/errors';
 import { AuthPage } from 'pages/auth/auth';
 import { ProfileChangePage } from 'pages/profile/profile-change/profile-change';
 import { PersonalInfoPage } from 'pages/profile/personal-info/personal-info';
+import { ChatPage } from 'pages/chat/chat2';
 
 const ROUTES = {
   '/': AuthPage('sign-in'),
   '/sign-in': AuthPage('sign-in'),
   '/sign-up': AuthPage('sign-up'),
-  // '/chat': Chat(),
+  '/chat': ChatPage(),
   '/profile': PersonalInfoPage(),
   '/profile-change': ProfileChangePage('info'),
   '/password-change': ProfileChangePage('password'),
