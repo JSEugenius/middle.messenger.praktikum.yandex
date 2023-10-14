@@ -1,10 +1,5 @@
 @import "styles";
 
-.root {
-  position: relative;
-  width: 100%;
-}
-
 .input {
   @include font(13px);
 
@@ -19,28 +14,9 @@
   width: 100%;
 }
 
-.label {
-  color: $dark-grey;
-  background-color: transparent;
-  font-size: 16px;
-  line-height: 16px;
-  pointer-events: none;
-  position: absolute;
-  transition: all 0.2s;
-  top: 16px;
-  left: 0;
-}
-
 .input:focus-visible + .label,
 .input:not(:placeholder-shown) + .label{
   @include font(11px);
   top: 0;
   left: 0;
-}
-
-.error {
-  @include font(11px);
-
-  color: $red;
-  margin-top: 8px;
 }

@@ -1,0 +1,8 @@
+@import "styles";
+
+.error {
+  @include font(11px);
+
+  color: $red;
+  margin-top: 8px;
+}

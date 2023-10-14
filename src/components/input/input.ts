@@ -6,9 +6,24 @@ export type TInput = {
   label: string;
   error?: string;
   type?: string;
+  value?: string;
+  onInput?: (event: any) => any;
+  onFocus?: (event: any) => any;
+  onBlur?: (event: any) => any;
 };
 
 export class Input extends Block<TInput> {
+  constructor(props: TInput) {
+    super({
+      ...props,
+      events: {
+        input: props.onInput,
+        focus: props.onFocus,
+        blur: props.onBlur,
+      },
+    });
+  }
+
   protected render(): DocumentFragment {
     return this.compile(inputTmpl, this.props);
   }
