@@ -1,53 +1,88 @@
-export const PROFILE_INFO_ITEMS = [
+import imgSrc from 'media/my-avatar.jpg';
+import style from './profile.module.scss';
+
+export const INFO_INPUTS = [
   {
-    title: 'Почта',
+    label: 'Почта',
     value: 'pochta@yandex.ru',
     name: 'email',
+    wrapperClassName: style.list_item,
   },
   {
-    title: 'Логин',
+    label: 'Логин',
     value: 'ivanivanov',
     name: 'login',
+    wrapperClassName: style.list_item,
   },
   {
-    title: 'Имя',
+    label: 'Имя',
     value: 'Иван',
     name: 'first_name',
+    wrapperClassName: style.list_item,
   },
   {
-    title: 'Фамилия',
+    label: 'Фамилия',
     value: 'Иванов',
     name: 'second_name',
+    wrapperClassName: style.list_item,
   },
   {
-    title: 'Имя в чате',
+    label: 'Имя в чате',
     value: 'Иван',
     name: 'display_name',
+    wrapperClassName: style.list_item,
   },
   {
-    title: 'Телефон',
+    label: 'Телефон',
     value: '+7 (909) 967 30 30',
     name: 'phone',
+    wrapperClassName: style.list_item,
   },
 ];
 
-export const PASSWORD_ITEMS = [
+const PASSWORD_INPUTS = [
   {
-    title: 'Старый пароль',
+    label: 'Старый пароль',
     value: 'пароль',
     name: 'oldPassword',
+    wrapperClassName: style.list_item,
   },
   {
-    title: 'Новый пароль',
+    label: 'Новый пароль',
     value: 'новый пароль',
     name: 'newPassword',
+    wrapperClassName: style.list_item,
   },
   {
-    title: 'Повторите новый пароль',
+    label: 'Повторите новый пароль',
     value: 'новый пароль',
     name: 'repeat-password',
+    wrapperClassName: style.list_item,
   },
 ];
+
+export const HEADING_PROPS = {
+  avatar: imgSrc,
+  firstName: 'Евгений',
+};
+
+const BUTTON = {
+  type: 'submit',
+  text: 'Сохранить',
+};
+
+export const PROFILE_CHANGE_PROPS = {
+  info: {
+    ...HEADING_PROPS,
+    inputs: INFO_INPUTS,
+    button: BUTTON,
+  },
+  password: {
+    ...HEADING_PROPS,
+    inputs: PASSWORD_INPUTS,
+    button: BUTTON,
+  },
+};
 
 export const LINKS = [
   {

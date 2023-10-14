@@ -1,26 +1,36 @@
-import { createElement } from 'utils/create-element';
-import { action, main } from 'pages/profile/personal-info/personal-info.tmpl';
-import { Main } from 'layouts/main/main';
-import { arrowButtonTmpl } from 'components/arrow-button/arrow-button.tmpl';
-import { linkTmpl } from 'components/link/link.tmpl';
-import { avatarTmpl } from 'components/avatar/avatar.tmpl';
-import imgSrc from 'media/empty-photo.png';
-import { LINKS, PROFILE_INFO_ITEMS } from 'pages/profile/profile.constants';
+import { PersonalInfoModule } from 'pages/profile/modules/personal-info/personal-info';
+import { HEADING_PROPS, INFO_INPUTS, LINKS } from 'pages/profile/profile.constants';
+import { InfoInput } from 'pages/profile/components/info-input/info-input';
+import { FieldWithLink } from 'pages/profile/components/field-with-link/field-with-link';
+import { Link } from 'components/link/link';
+import { Heading } from 'pages/profile/components/heading/heading';
+import { Avatar } from 'components/avatar/avatar';
+import { Action } from 'pages/profile/components/action/action';
+import { ArrowButton } from 'components/arrow-button/arrow-button';
+import { MainLayout } from 'layouts/main/main2';
 
-export const PersonalInfo = () => {
-  const buttonArrow = createElement(arrowButtonTmpl);
-  const side = createElement(action, {
-    button: buttonArrow,
+export const PersonalInfoPage = () => {
+  const heading = new Heading({
+    avatar: new Avatar({ imgSrc: HEADING_PROPS.avatar }),
+    firstName: HEADING_PROPS.firstName,
   });
 
-  const links = LINKS.map((item) => createElement(linkTmpl, item));
-
-  const mainContent = createElement(main, {
-    avatar: createElement(avatarTmpl, { imgSrc }),
-    firstName: 'Иван',
-    profileInfo: PROFILE_INFO_ITEMS,
-    links,
+  const inputs = INFO_INPUTS.map((inputProps) => {
+    const props = { ...inputProps, readonly: true };
+    return new InfoInput(props);
   });
 
-  return Main({ side, main: mainContent });
+  const links = LINKS.map((linkProps) => {
+    const link = new Link(linkProps);
+
+    return new FieldWithLink({ link });
+  });
+
+  const main = new PersonalInfoModule({ heading, inputs, links });
+
+  const side = new Action({
+    button: new ArrowButton({}),
+  });
+
+  return new MainLayout({ main, side });
 };

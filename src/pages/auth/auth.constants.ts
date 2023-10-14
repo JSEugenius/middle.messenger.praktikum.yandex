@@ -5,8 +5,8 @@ export const AUTH_PROPS = {
       {
         name: 'login',
         label: 'Логин',
-        type: 'text',
         error: 'Неверный логин или пароль',
+        readonly: true,
       },
       {
         name: 'password',
@@ -33,17 +33,14 @@ export const AUTH_PROPS = {
       {
         name: 'login',
         label: 'Логин',
-        type: 'text',
       },
       {
         name: 'first_name',
         label: 'Имя',
-        type: 'text',
       },
       {
         name: 'second_name',
         label: 'Фамилия',
-        type: 'text',
       },
       {
         name: 'phone',

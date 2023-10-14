@@ -10,9 +10,6 @@ export type TInput = {
 
 export class Input extends Block<TInput> {
   protected render(): DocumentFragment {
-    return this.compile(inputTmpl, {
-      ...this.props,
-      type: this.props.type || 'text',
-    });
+    return this.compile(inputTmpl, this.props);
   }
 }

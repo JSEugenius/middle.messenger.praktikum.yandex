@@ -1,7 +1,7 @@
-import style from './form.module.scss';
+import style from './auth-form.module.scss';
 
 // language=hbs
-export const formTmpl = `
+export const authFormTmpl = `
     <article class="${style.root}">
         <h1 class="${style.title}">{{title}}</h1>
         <form class="${style.form}">

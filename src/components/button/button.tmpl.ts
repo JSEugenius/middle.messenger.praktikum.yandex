@@ -2,7 +2,5 @@ import style from './button.module.scss';
 
 // language=hbs
 export const buttonTmpl = `
-    <div>
-        <button type="{{type}}" class="${style.button}">{{ text }}</button>
-    </div>
+    <button type="{{lookupOrDefault this 'type' 'button'}}" class="${style.button}">{{ text }}</button>
 `;

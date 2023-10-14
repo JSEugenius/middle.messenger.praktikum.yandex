@@ -10,13 +10,6 @@ export type TButton = {
 };
 
 export class Button extends Block<TButton> {
-  constructor(props: TButton) {
-    super({
-      ...props,
-      type: props.type || 'button',
-    });
-  }
-
   render() {
     return this.compile(buttonTmpl, this.props);
   }

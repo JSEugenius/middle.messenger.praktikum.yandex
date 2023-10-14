@@ -1,0 +1,30 @@
+@import "styles";
+
+.field {
+  @include font(13px);
+
+  padding: 10px 0;
+  border-bottom: $border;
+
+  &:last-of-type {
+    border-bottom: 0;
+  }
+}
+
+.list {
+  list-style: none;
+  margin-bottom: 60px;
+}
+
+.list_item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info_input {
+  color: $dark-grey;
+  text-align: end;
+  border: 0;
+  outline: none;
+  font-family: inherit;
+}
