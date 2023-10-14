@@ -1,4 +1,4 @@
-import imgSrc from 'media/my-avatar.jpg';
+import avatarImg from 'media/my-avatar.jpg';
 import photoSrc from 'media/photo-message.png';
 
 /** =================================================================================== */
@@ -17,15 +17,23 @@ const createList = (size: number, obj: object | object[]) => {
 };
 /** =================================================================================== */
 
-export const CHAT_LIST = createList(30, {
-  title: 'Евгений',
-  time: '15:12',
-  message: 'Друзья, у меня для вас особенный выпуск новостей!',
-  count: 4,
-  avatar: imgSrc,
-});
+export const CHAT_LIST = createList(15, [
+  {
+    title: 'Евгений',
+    time: '15:12',
+    message: 'Друзья, у меня для вас особенный выпуск новостей!',
+    count: 4,
+    avatar: avatarImg,
+  },
+  {
+    title: 'Евгений',
+    time: '15:12',
+    message: 'Друзья, у меня для вас особенный выпуск новостей!',
+    count: 4,
+  },
+]);
 
-export const MESSAGES = createList(30, [
+export const MESSAGES = createList(10, [
   {
     text: `Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила 
     Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали 
@@ -48,7 +56,7 @@ export const MESSAGES = createList(30, [
 
 export const HEADER_PROPS = {
   header: {
-    avatar: imgSrc,
+    avatar: avatarImg,
     title: 'Евгений',
   },
   messages: MESSAGES,

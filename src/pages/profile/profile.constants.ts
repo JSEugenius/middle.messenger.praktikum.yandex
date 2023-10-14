@@ -1,42 +1,35 @@
 import imgSrc from 'media/my-avatar.jpg';
-import style from './profile.module.scss';
 
 export const INFO_INPUTS = [
   {
     label: 'Почта',
     value: 'pochta@yandex.ru',
     name: 'email',
-    wrapperClassName: style.list_item,
   },
   {
     label: 'Логин',
     value: 'ivanivanov',
     name: 'login',
-    wrapperClassName: style.list_item,
   },
   {
     label: 'Имя',
     value: 'Иван',
     name: 'first_name',
-    wrapperClassName: style.list_item,
   },
   {
     label: 'Фамилия',
     value: 'Иванов',
     name: 'second_name',
-    wrapperClassName: style.list_item,
   },
   {
     label: 'Имя в чате',
     value: 'Иван',
     name: 'display_name',
-    wrapperClassName: style.list_item,
   },
   {
     label: 'Телефон',
     value: '+7 (909) 967 30 30',
     name: 'phone',
-    wrapperClassName: style.list_item,
   },
 ];
 
@@ -45,19 +38,16 @@ const PASSWORD_INPUTS = [
     label: 'Старый пароль',
     value: 'пароль',
     name: 'oldPassword',
-    wrapperClassName: style.list_item,
   },
   {
     label: 'Новый пароль',
     value: 'новый пароль',
     name: 'newPassword',
-    wrapperClassName: style.list_item,
   },
   {
     label: 'Повторите новый пароль',
     value: 'новый пароль',
     name: 'repeat-password',
-    wrapperClassName: style.list_item,
   },
 ];
 

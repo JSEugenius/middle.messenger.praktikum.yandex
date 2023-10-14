@@ -1,6 +1,6 @@
 @import "styles";
 
-.field {
+.root {
   @include font(13px);
 
   padding: 10px 0;
@@ -9,16 +9,6 @@
   &:last-of-type {
     border-bottom: 0;
   }
-}
-
-.list {
-  list-style: none;
-  margin-bottom: 60px;
-}
-
-.list_item {
-  display: flex;
-  justify-content: space-between;
 }
 
 .info_input {

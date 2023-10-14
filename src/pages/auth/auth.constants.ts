@@ -6,7 +6,6 @@ export const AUTH_PROPS = {
         name: 'login',
         label: 'Логин',
         error: 'Неверный логин или пароль',
-        readonly: true,
       },
       {
         name: 'password',

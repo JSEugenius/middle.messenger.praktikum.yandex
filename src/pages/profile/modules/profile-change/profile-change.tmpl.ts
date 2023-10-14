@@ -1,4 +1,4 @@
-import style from './profile-change.module.scss';
+import style from '../../profile.module.scss';
 
 // language=hbs
 export const profileChangeTmpl = `

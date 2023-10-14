@@ -3,7 +3,7 @@ import { ErrorPage } from 'pages/errors/errors';
 import { AuthPage } from 'pages/auth/auth';
 import { ProfileChangePage } from 'pages/profile/profile-change/profile-change';
 import { PersonalInfoPage } from 'pages/profile/personal-info/personal-info';
-import { ChatPage } from 'pages/chat/chat2';
+import { ChatPage } from 'pages/chat/chat';
 
 const ROUTES = {
   '/': AuthPage('sign-in'),

@@ -1,4 +1,12 @@
-import { createElement } from 'utils/create-element';
+import { Block } from 'classes/block';
 import { centeredLayout } from 'layouts/centered/centered.tmpl';
 
-export const Centered = (content: string) => createElement(centeredLayout, { content });
+type TCenteredLayout = {
+  content: Block
+};
+
+export class CenteredLayout extends Block<TCenteredLayout> {
+  protected render(): DocumentFragment {
+    return this.compile(centeredLayout, this.props);
+  }
+}

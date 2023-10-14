@@ -1,5 +1,5 @@
 import { AuthFormModule } from 'modules/auth-form/auth-form';
-import { CenteredLayout } from 'layouts/centered/centered2';
+import { CenteredLayout } from 'layouts/centered/centered';
 import { Input, TInput } from 'components/input/input';
 import { Button } from 'components/button/button';
 import { Link } from 'components/link/link';

@@ -7,7 +7,7 @@ export const authFormTmpl = `
         <form class="${style.form}">
             <div class="${style.input_container}">
                 {{#each inputs}}
-                    {{{.}}}
+                    {{{this}}}
                 {{/each}}
             </div>
             <div class="${style.button_container}">

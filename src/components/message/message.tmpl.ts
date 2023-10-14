@@ -4,7 +4,7 @@ import style from './message.module.scss';
 export const messageTmpl = `
     {{#if own}}
         <li class="${style.root} ${style.root_own}">
-            <p class="${style.message}">{{text}}</p>
+            <p>{{text}}</p>
             <time class="${style.time} ${style.time_own}">{{time}}</time>
         </li>
     {{else}}

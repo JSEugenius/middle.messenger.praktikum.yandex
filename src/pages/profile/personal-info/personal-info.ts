@@ -7,7 +7,8 @@ import { Heading } from 'pages/profile/components/heading/heading';
 import { Avatar } from 'components/avatar/avatar';
 import { Action } from 'pages/profile/components/action/action';
 import { ArrowButton } from 'components/arrow-button/arrow-button';
-import { MainLayout } from 'layouts/main/main2';
+import { MainLayout } from 'layouts/main/main';
+import style from '../profile.module.scss';
 
 export const PersonalInfoPage = () => {
   const heading = new Heading({
@@ -16,13 +17,16 @@ export const PersonalInfoPage = () => {
   });
 
   const inputs = INFO_INPUTS.map((inputProps) => {
-    const props = { ...inputProps, readonly: true };
+    const props = {
+      ...inputProps,
+      wrapperClassName: style.list_item,
+      readonly: true,
+    };
     return new InfoInput(props);
   });
 
   const links = LINKS.map((linkProps) => {
     const link = new Link(linkProps);
-
     return new FieldWithLink({ link });
   });
 

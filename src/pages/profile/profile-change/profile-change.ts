@@ -1,6 +1,6 @@
 import { ProfileChangeModule } from 'pages/profile/modules/profile-change/profile-change';
 import { Action } from 'pages/profile/components/action/action';
-import { MainLayout } from 'layouts/main/main2';
+import { MainLayout } from 'layouts/main/main';
 import { Avatar } from 'components/avatar/avatar';
 import { Button, TButton } from 'components/button/button';
 import { PROFILE_CHANGE_PROPS } from 'pages/profile/profile.constants';

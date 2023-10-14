@@ -1,5 +1,5 @@
 import { ErrorModule } from 'modules/error/error';
-import { CenteredLayout } from 'layouts/centered/centered2';
+import { CenteredLayout } from 'layouts/centered/centered';
 import { ERRORS_PROPS } from 'pages/errors/errors.constants';
 
 export const ErrorPage = (code: keyof typeof ERRORS_PROPS) => {
