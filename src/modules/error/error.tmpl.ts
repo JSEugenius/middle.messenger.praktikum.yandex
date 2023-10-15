@@ -1,6 +1,6 @@
 import style from './error.module.scss';
 
-//language=hbs
+// language=hbs
 export const errorTmpl = `
   <article class="${style.root}">
       <div class="${style.heading}">

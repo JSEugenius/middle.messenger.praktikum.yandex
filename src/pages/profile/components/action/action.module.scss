@@ -1,0 +1,17 @@
+@import "styles";
+
+.side {
+  width: 65px;
+  background-color: $very-light-grey;
+  height: 100%;
+  display: flex;
+  cursor: pointer;
+}
+
+.side:hover {
+  background-color: darken($very-light-grey, 2%);
+}
+
+.side:active {
+  background-color: darken($very-light-grey, 4%);
+}

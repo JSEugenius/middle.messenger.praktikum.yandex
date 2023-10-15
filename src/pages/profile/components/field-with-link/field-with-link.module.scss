@@ -1,0 +1,12 @@
+@import "styles";
+
+.field {
+  @include font(13px);
+
+  padding: 10px 0;
+  border-bottom: $border;
+
+  &:last-of-type {
+    border-bottom: 0;
+  }
+}

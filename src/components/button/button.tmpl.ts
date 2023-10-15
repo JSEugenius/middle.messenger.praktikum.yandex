@@ -1,6 +1,6 @@
 import style from './button.module.scss';
 
-//language=hbs
+// language=hbs
 export const buttonTmpl = `
-    <button type="{{type}}" class="${style.button}">{{ text }}</button>
+    <button type="{{lookupOrDefault this 'type' 'button'}}" class="${style.button}">{{ text }}</button>
 `;

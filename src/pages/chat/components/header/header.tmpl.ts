@@ -1,8 +1,8 @@
 import style from './header.module.scss';
 
-//language=hbs
+// language=hbs
 export const headerTmpl = `
-    <div class="${style.header}">
+    <div class="${style.root}">
         <div class="${style.chat_info}">
             <div class="${style.avatar_container}">
                 {{#if avatar}}

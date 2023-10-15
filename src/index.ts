@@ -1,28 +1,23 @@
-import { PersonalInfo } from 'pages/profile/personal-info/personal-info.ts';
-import { NotFound } from 'pages/errors/not-found/not-found';
-import { ServerError } from 'pages/errors/server-error/server-error';
-import { SignIn } from 'pages/sign-in/sign-in.ts';
-import { SignUp } from 'pages/sign-up/sign-up.ts';
-import { ProfileChange } from 'pages/profile/profile-change/profile-change.ts';
-import { PasswordChange } from 'pages/profile/password-change/password-change.ts';
-import { Chat } from 'pages/chat/chat.ts';
+import { renderDOM } from 'utils/render-dom';
+import { ErrorPage } from 'pages/errors/errors';
+import { AuthPage } from 'pages/auth/auth';
+import { ProfileChangePage } from 'pages/profile/profile-change/profile-change';
+import { PersonalInfoPage } from 'pages/profile/personal-info/personal-info';
+import { ChatPage } from 'pages/chat/chat';
 
 const ROUTES = {
-  '/': SignIn(),
-  '/sign-in': SignIn(),
-  '/sign-up': SignUp(),
-  '/chat': Chat(),
-  '/profile': PersonalInfo(),
-  '/profile-change': ProfileChange(),
-  '/password-change': PasswordChange(),
-  '/404': NotFound(),
-  '/500': ServerError(),
+  '/': AuthPage('sign-in'),
+  '/sign-in': AuthPage('sign-in'),
+  '/sign-up': AuthPage('sign-up'),
+  '/chat': ChatPage(),
+  '/profile': PersonalInfoPage(),
+  '/profile-change': ProfileChangePage('info'),
+  '/password-change': ProfileChangePage('password'),
+  '/404': ErrorPage(404),
+  '/500': ErrorPage(500),
 };
-window.addEventListener('DOMContentLoaded', () => {
-  const root = document.getElementById('app');
 
-  if (root) {
-    const path = window.location.pathname as keyof typeof ROUTES;
-    root.innerHTML = ROUTES[path];
-  }
+window.addEventListener('DOMContentLoaded', () => {
+  const path = window.location.pathname as keyof typeof ROUTES;
+  renderDOM('#app', ROUTES[path]);
 });
