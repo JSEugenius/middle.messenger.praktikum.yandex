@@ -21,7 +21,7 @@
 }
 
 .avatar_img:hover {
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 50%);
 }
 
 .upload_container {
@@ -32,14 +32,14 @@
   height: inherit;
   border-radius: 100%;
   opacity: 0;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgb(0 0 0 / 0%);
   transition: all ease-in-out .2s;
   display: flex;
 }
 
 .upload_container:hover {
   opacity: 1;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgb(0 0 0 / 50%);
 }
 
 .upload_container > img {
