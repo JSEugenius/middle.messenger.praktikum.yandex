@@ -9,12 +9,8 @@ const enum BlockEvents {
   FLOW_RENDER = 'flow:render',
 }
 
-type EventName = Values<typeof BlockEvents>;
-
-type BlockEventBus = EventBus<EventName>;
-
 export class Block<P extends Record<string, any> = any> {
-  eventBus: () => BlockEventBus;
+  eventBus: () => EventBus;
 
   children: Record<string, Block | Block[]>;
 
@@ -33,7 +29,7 @@ export class Block<P extends Record<string, any> = any> {
 
     this.children = children;
 
-    const eventBus = new EventBus<EventName>();
+    const eventBus = new EventBus();
     this._id = makeUUID();
     this._meta = {
       props,
@@ -46,7 +42,7 @@ export class Block<P extends Record<string, any> = any> {
   }
 
   /** =========================================================================================== */
-  _registerEvent(eventbus: BlockEventBus) {
+  _registerEvent(eventbus: EventBus) {
     eventbus.on(BlockEvents.INIT, this._init.bind(this));
     eventbus.on(BlockEvents.FLOW_CDM, this._componentDidMount.bind(this));
     eventbus.on(BlockEvents.FLOW_CDU, this._componentDidUpdate.bind(this));
