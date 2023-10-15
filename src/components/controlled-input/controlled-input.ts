@@ -4,8 +4,8 @@ import { controlledInputTmpl } from 'components/controlled-input/controlled-inpu
 import { Label, TLabel } from 'components/label/label';
 import { ErrorComponent } from 'components/error/error';
 import { validate } from 'utils/validate';
+import { InputName } from 'constants/enums';
 import style from './controlled-input.module.scss';
-import { InputName } from '../../@types/enums';
 
 export type TControlledInput = Omit<(TInput & TLabel), 'className'>;
 

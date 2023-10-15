@@ -1,4 +1,4 @@
-export const enum InputName {
+export enum InputName {
   EMAIL = 'email',
   LOGIN = 'login',
   PASSWORD = 'password',

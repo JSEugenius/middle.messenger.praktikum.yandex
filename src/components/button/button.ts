@@ -1,6 +1,6 @@
 import { buttonTmpl } from 'components/button/button.tmpl';
 import { Block } from 'classes/block';
-import { ButtonType } from '../../@types/enums';
+import { ButtonType } from 'constants/enums';
 
 export type TButton = {
   text: string;

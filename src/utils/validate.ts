@@ -1,4 +1,4 @@
-import { InputName } from '../@types/enums';
+import { InputName } from 'constants/enums';
 
 type TFields = Partial<Record<InputName, string>>;
 

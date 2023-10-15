@@ -1,4 +1,4 @@
-import { ButtonType, InputName } from '../../@types/enums';
+import { ButtonType, InputName } from 'constants/enums';
 
 export const AUTH_PROPS = {
   'sign-in': {

@@ -18,6 +18,7 @@
     "baseUrl": ".",
     "paths": {
       "utils/*": ["src/utils/*"],
+      "constants/*": ["src/constants/*"],
       "components/*": ["src/components/*"],
       "classes/*": ["src/classes/*"],
       "pages/*": ["src/pages/*"],

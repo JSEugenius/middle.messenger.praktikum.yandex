@@ -1,5 +1,5 @@
 import imgSrc from 'media/my-avatar.jpg';
-import { ButtonType, InputName } from '../../@types/enums';
+import { ButtonType, InputName } from 'constants/enums';
 
 export const INFO_INPUTS = [
   {

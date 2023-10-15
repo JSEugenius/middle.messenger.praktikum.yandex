@@ -1,6 +1,6 @@
 import { validate } from 'utils/validate';
 import { Block } from 'classes/block';
-import { InputName } from '../@types/enums';
+import { InputName } from 'constants/enums';
 
 export const formValidate = (e: Event, inputs: Block[]) => {
   (e as Event).preventDefault();

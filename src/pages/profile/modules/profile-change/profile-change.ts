@@ -1,7 +1,7 @@
 import { Block } from 'classes/block';
 import { profileChangeTmpl } from 'pages/profile/modules/profile-change/profile-change.tmpl';
 import { validate } from 'utils/validate';
-import { InputName } from '../../../../@types/enums';
+import { InputName } from 'constants/enums';
 
 type TProfileChangeModule = {
   heading: Block;
