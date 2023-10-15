@@ -8,5 +8,12 @@ export const enum InputName {
   PHONE = 'phone',
   OLD_PASSWORD = 'oldPassword',
   REPEAT_PASSWORD = 'repeatPassword',
+  REPEAT_NEW_PASSWORD = 'repeatNewPassword',
   NEW_PASSWORD = 'newPassword',
+}
+
+export const enum ButtonType {
+  SUBMIT = 'submit',
+  BUTTON = 'button',
+  RESET = 'reset',
 }

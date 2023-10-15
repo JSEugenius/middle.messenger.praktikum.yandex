@@ -4,7 +4,7 @@ import style from '../../profile.module.scss';
 export const profileChangeTmpl = `
     <div class="${style.main}">
         {{{heading}}}
-        <form class="${style.form}">
+        <form class="${style.form}" novalidate method="post">
             <ul class="${style.list}">
                 {{#each inputs}}
                     {{{this}}}

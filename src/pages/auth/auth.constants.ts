@@ -1,4 +1,4 @@
-import { InputName } from '../../@types/enums';
+import { ButtonType, InputName } from '../../@types/enums';
 
 export const AUTH_PROPS = {
   'sign-in': {
@@ -17,6 +17,7 @@ export const AUTH_PROPS = {
     ],
     button: {
       text: 'Авторизоваться',
+      type: ButtonType.SUBMIT,
     },
     link: {
       to: '/sign-up',
@@ -61,6 +62,7 @@ export const AUTH_PROPS = {
     ],
     button: {
       text: 'Зарегистрироваться',
+      type: ButtonType.SUBMIT,
     },
     link: {
       to: '/sign-in',

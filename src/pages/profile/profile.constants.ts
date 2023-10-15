@@ -1,5 +1,5 @@
 import imgSrc from 'media/my-avatar.jpg';
-import { InputName } from '../../@types/enums';
+import { ButtonType, InputName } from '../../@types/enums';
 
 export const INFO_INPUTS = [
   {
@@ -9,27 +9,27 @@ export const INFO_INPUTS = [
   },
   {
     label: 'Логин',
-    value: 'ivanivanov',
+    value: 'jseugenius',
     name: InputName.LOGIN,
   },
   {
     label: 'Имя',
-    value: 'Иван',
+    value: 'Евгений',
     name: InputName.FIRST_NAME,
   },
   {
     label: 'Фамилия',
-    value: 'Иванов',
+    value: 'Новиков',
     name: InputName.SECOND_NAME,
   },
   {
     label: 'Имя в чате',
-    value: 'Иван',
+    value: 'Евгений',
     name: InputName.DISPLAY_NAME,
   },
   {
     label: 'Телефон',
-    value: '+7 (909) 967 30 30',
+    value: '+79099673030',
     name: InputName.PHONE,
   },
 ];
@@ -39,16 +39,19 @@ const PASSWORD_INPUTS = [
     label: 'Старый пароль',
     value: 'пароль',
     name: InputName.OLD_PASSWORD,
+    type: 'password',
   },
   {
     label: 'Новый пароль',
     value: 'новый пароль',
     name: InputName.NEW_PASSWORD,
+    type: 'password',
   },
   {
     label: 'Повторите новый пароль',
     value: 'новый пароль',
-    name: InputName.REPEAT_PASSWORD,
+    name: InputName.REPEAT_NEW_PASSWORD,
+    type: 'password',
   },
 ];
 
@@ -58,7 +61,7 @@ export const HEADING_PROPS = {
 };
 
 const BUTTON = {
-  type: 'submit',
+  type: ButtonType.SUBMIT,
   text: 'Сохранить',
 };
 

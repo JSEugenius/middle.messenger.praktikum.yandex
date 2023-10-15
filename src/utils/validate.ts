@@ -152,6 +152,18 @@ const repeatPasswordValidate = (value: string): string => {
 };
 
 /** ============================================================================================= */
+const repeatNewPasswordValidate = (value: string): string => {
+  const result: string[] = [];
+  const password = document.getElementsByName(InputName.NEW_PASSWORD)[0] as HTMLInputElement;
+
+  if (value !== password.value) {
+    result.push('Пароли не совпадают');
+  }
+
+  return createResultMessage(result);
+};
+
+/** ============================================================================================= */
 export const validate = (fields: TFields): TValidationObject => {
   const result = {} as TValidationObject;
 
@@ -177,8 +189,16 @@ export const validate = (fields: TFields): TValidationObject => {
         result[name] = passwordValidate(value);
         break;
       }
+      case InputName.NEW_PASSWORD: {
+        result[name] = passwordValidate(value);
+        break;
+      }
       case InputName.REPEAT_PASSWORD: {
         result[name] = repeatPasswordValidate(value);
+        break;
+      }
+      case InputName.REPEAT_NEW_PASSWORD: {
+        result[name] = repeatNewPasswordValidate(value);
         break;
       }
       case InputName.FIRST_NAME: {

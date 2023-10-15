@@ -1,9 +1,10 @@
 import { buttonTmpl } from 'components/button/button.tmpl';
 import { Block } from 'classes/block';
+import { ButtonType } from '../../@types/enums';
 
 export type TButton = {
   text: string;
-  type?: 'submit' | 'reset' | 'button' | undefined;
+  type?: ButtonType;
   events?: {
     click: () => void
   }
