@@ -1,15 +1,21 @@
-type Listener = (...args: any[]) => void;
+type Handler<A extends any[] = unknown[]> = (...args: A) => void;
+type MapInterface<P> = P[keyof P];
 
-export class EventBus<EventName extends string> {
-  private _listeners: { [K in EventName]?: Listener[] } = {};
+export class EventBus<
+  E extends Record<string, string> = Record<string, string>,
+  Args extends Record<MapInterface<E>, any[]> = Record<string, any[]>,
+> {
+  private readonly _listeners: {
+    [K in MapInterface<E>]?: Handler<Args[K]>[]
+  } = {};
 
-  private _checkEvent(event: EventName) {
+  private _checkEvent<Event extends MapInterface<E>>(event: Event) {
     if (!this._listeners[event]) {
       throw new Error(`Нет события ${event}`);
     }
   }
 
-  on(event: EventName, callback: Listener) {
+  on<Event extends MapInterface<E>>(event: Event, callback: Handler<Args[Event]>) {
     if (!this._listeners[event]) {
       this._listeners[event] = [];
     }
@@ -17,13 +23,13 @@ export class EventBus<EventName extends string> {
     this._listeners[event]!.push(callback);
   }
 
-  off(event: EventName, callback: Listener) {
+  off<Event extends MapInterface<E>>(event: Event, callback: Handler<Args[Event]>) {
     this._checkEvent(event);
 
     this._listeners[event] = this._listeners[event]!.filter((listener) => listener !== callback);
   }
 
-  emit(event: EventName, ...args: any[]) {
+  emit<Event extends MapInterface<E>>(event: Event, ...args: Args[Event]) {
     this._checkEvent(event);
 
     this._listeners[event]!.forEach((listener) => {
