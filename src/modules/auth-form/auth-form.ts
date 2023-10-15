@@ -1,6 +1,6 @@
 import { Block } from 'classes/block';
 import { authFormTmpl } from 'modules/auth-form/auth-form.tmpl';
-import { formValidate } from 'utils/form-validate';
+import { formValidate } from 'modules/auth-form/auth-form.utils';
 
 type TAuthFormModule = {
   title: string;
