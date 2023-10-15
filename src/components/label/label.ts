@@ -1,9 +1,10 @@
 import { Block } from 'classes/block';
 import { labelTmpl } from 'components/label/label.tmpl';
 
-type TLabel = {
+export type TLabel = {
   name: string;
   label: string;
+  className?: string;
 };
 
 export class Label extends Block<TLabel> {

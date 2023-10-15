@@ -1,12 +1,12 @@
 import { AuthFormModule } from 'modules/auth-form/auth-form';
 import { CenteredLayout } from 'layouts/centered/centered';
-import { Input, TInput } from 'components/input/input';
 import { Button } from 'components/button/button';
 import { Link } from 'components/link/link';
 import { AUTH_PROPS } from 'pages/auth/auth.constants';
-import { ControlledInput } from 'components/controlled-input/controlled-input';
+import { ControlledInput, TControlledInput } from 'components/controlled-input/controlled-input';
 
-const createInputs = (inputs: TInput[]) => inputs.map((props) => new ControlledInput(props));
+// eslint-disable-next-line max-len
+const createInputs = (inputs: TControlledInput[]) => inputs.map((props) => new ControlledInput(props));
 
 export const AuthPage = (props: keyof typeof AUTH_PROPS) => {
   const content = new AuthFormModule({

@@ -1,14 +1,16 @@
+import { InputName } from '../../@types/enums';
+
 export const AUTH_PROPS = {
   'sign-in': {
     title: 'Вход',
     inputs: [
       {
-        name: 'login',
+        name: InputName.LOGIN,
         label: 'Логин',
         error: 'Неверный логин или пароль',
       },
       {
-        name: 'password',
+        name: InputName.PASSWORD,
         label: 'Пароль',
         type: 'password',
       },
@@ -25,34 +27,34 @@ export const AUTH_PROPS = {
     title: 'Регистрация',
     inputs: [
       {
-        name: 'email',
+        name: InputName.EMAIL,
         label: 'Почта',
         type: 'email',
       },
       {
-        name: 'login',
+        name: InputName.LOGIN,
         label: 'Логин',
       },
       {
-        name: 'first_name',
+        name: InputName.FIRST_NAME,
         label: 'Имя',
       },
       {
-        name: 'second_name',
+        name: InputName.SECOND_NAME,
         label: 'Фамилия',
       },
       {
-        name: 'phone',
+        name: InputName.PHONE,
         label: 'Телефон',
         type: 'tel',
       },
       {
-        name: 'password',
+        name: InputName.PASSWORD,
         label: 'Пароль',
         type: 'password',
       },
       {
-        name: 'repeat_password',
+        name: InputName.REPEAT_PASSWORD,
         label: 'Пароль (ещё раз)',
         type: 'password',
       },

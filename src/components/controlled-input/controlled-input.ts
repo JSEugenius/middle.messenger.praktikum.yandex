@@ -1,38 +1,47 @@
 import { Block } from 'classes/block';
 import { Input, TInput } from 'components/input/input';
 import { controlledInputTmpl } from 'components/controlled-input/controlled-input.tmpl';
-import { Label } from 'components/label/label';
+import { Label, TLabel } from 'components/label/label';
 import { ErrorComponent } from 'components/error/error';
+import { validate } from 'utils/validate';
 import style from './controlled-input.module.scss';
+import { InputName } from '../../@types/enums';
 
-type TControlledInput = {
-  isError?: boolean;
-  onBlur?: (event: any) => any;
-} & TInput;
+export type TControlledInput = Omit<(TInput & TLabel), 'className'>;
 
 export class ControlledInput extends Block<TControlledInput> {
   protected init() {
     this.children.input = new Input({
-      ...this.props,
-      inputClassName: style.input,
+      name: this.props.name,
+      value: this.props.value,
+      type: this.props.type,
+      className: style.input,
+
       onBlur: (e) => {
-        if (e.target.value.length > 1) {
-          this.children.error.setProps({
-            error: 'AsdasdasdAS',
+        const element = e.target as HTMLInputElement;
+
+        const errorObj = validate({ [this.props.name]: element.value });
+
+        if (errorObj[this.props.name as InputName]) {
+          (this.children.error as Block).setProps({
+            error: errorObj[this.props.name as InputName],
           });
         }
       },
-      onFocus: (e) => {
-        this.children.error.setProps({
+
+      onFocus: () => {
+        (this.children.error as Block).setProps({
           error: '',
         });
       },
     });
+
     this.children.label = new Label({
       label: this.props.label,
       name: this.props.name,
-      labelClassName: style.label,
+      className: style.label,
     });
+
     this.children.error = new ErrorComponent({
       error: '',
     });

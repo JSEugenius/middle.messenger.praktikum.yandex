@@ -3,16 +3,15 @@ import { inputTmpl } from 'components/input/input.tmpl';
 
 export type TInput = {
   name: string;
-  label: string;
-  error?: string;
   type?: string;
   value?: string;
-  onInput?: (event: any) => any;
-  onFocus?: (event: any) => any;
-  onBlur?: (event: any) => any;
+  className?: string;
+  onInput?: (event: Event) => void;
+  onFocus?: (event: Event) => void;
+  onBlur?: (event: Event) => void;
 };
 
-export class Input extends Block<TInput> {
+export class Input extends Block {
   constructor(props: TInput) {
     super({
       ...props,

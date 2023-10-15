@@ -1,35 +1,36 @@
 import imgSrc from 'media/my-avatar.jpg';
+import { InputName } from '../../@types/enums';
 
 export const INFO_INPUTS = [
   {
     label: 'Почта',
     value: 'pochta@yandex.ru',
-    name: 'email',
+    name: InputName.EMAIL,
   },
   {
     label: 'Логин',
     value: 'ivanivanov',
-    name: 'login',
+    name: InputName.LOGIN,
   },
   {
     label: 'Имя',
     value: 'Иван',
-    name: 'first_name',
+    name: InputName.FIRST_NAME,
   },
   {
     label: 'Фамилия',
     value: 'Иванов',
-    name: 'second_name',
+    name: InputName.SECOND_NAME,
   },
   {
     label: 'Имя в чате',
     value: 'Иван',
-    name: 'display_name',
+    name: InputName.DISPLAY_NAME,
   },
   {
     label: 'Телефон',
     value: '+7 (909) 967 30 30',
-    name: 'phone',
+    name: InputName.PHONE,
   },
 ];
 
@@ -37,17 +38,17 @@ const PASSWORD_INPUTS = [
   {
     label: 'Старый пароль',
     value: 'пароль',
-    name: 'oldPassword',
+    name: InputName.OLD_PASSWORD,
   },
   {
     label: 'Новый пароль',
     value: 'новый пароль',
-    name: 'newPassword',
+    name: InputName.NEW_PASSWORD,
   },
   {
     label: 'Повторите новый пароль',
     value: 'новый пароль',
-    name: 'repeat-password',
+    name: InputName.REPEAT_PASSWORD,
   },
 ];
 
