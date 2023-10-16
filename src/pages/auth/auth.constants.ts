@@ -7,7 +7,6 @@ export const AUTH_PROPS = {
       {
         name: InputName.LOGIN,
         label: 'Логин',
-        error: 'Неверный логин или пароль',
       },
       {
         name: InputName.PASSWORD,

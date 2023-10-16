@@ -1,6 +1,6 @@
 import { Block } from 'classes/block';
 import { authFormTmpl } from 'modules/auth-form/auth-form.tmpl';
-import { formValidate } from 'modules/auth-form/auth-form.utils';
+import { validateSubmit } from 'utils/validate-submit';
 
 type TAuthFormModule = {
   title: string;
@@ -15,7 +15,7 @@ export class AuthFormModule extends Block {
       ...props,
       events: {
         submit: (event: Event) => {
-          formValidate(event, this.children.inputs as Block[]);
+          validateSubmit(event, this.children.inputs as Block[]);
         },
       },
     });

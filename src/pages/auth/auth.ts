@@ -3,7 +3,7 @@ import { CenteredLayout } from 'layouts/centered/centered';
 import { Button } from 'components/button/button';
 import { Link } from 'components/link/link';
 import { AUTH_PROPS } from 'pages/auth/auth.constants';
-import { ControlledInput, TControlledInput } from 'components/controlled-input/controlled-input';
+import { ControlledInput, TControlledInput } from 'modules/controlled-input/controlled-input';
 
 // eslint-disable-next-line max-len
 const createInputs = (inputs: TControlledInput[]) => inputs.map((props) => new ControlledInput(props));
