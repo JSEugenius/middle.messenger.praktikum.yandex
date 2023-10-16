@@ -5,7 +5,7 @@ export const profileChangeTmpl = `
     <div class="${style.main}">
         {{{heading}}}
         <form class="${style.form}" novalidate method="post">
-            <ul class="${style.list}">
+            <ul class="${style.list} ${style.list_change}">
                 {{#each inputs}}
                     {{{this}}}
                 {{/each}}

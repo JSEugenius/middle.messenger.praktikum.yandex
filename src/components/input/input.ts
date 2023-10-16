@@ -5,6 +5,7 @@ export type TInput = {
   name: string;
   type?: string;
   value?: string;
+  placeholder?: string;
   className?: string;
   onInput?: (event: Event) => void;
   onFocus?: (event: Event) => void;

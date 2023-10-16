@@ -16,6 +16,12 @@
 .list {
   list-style: none;
   margin-bottom: 60px;
+
+  &_change {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
 }
 
 .list_item {

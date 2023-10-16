@@ -23,7 +23,7 @@ const checkLength = ({
     result.push(`Должно быть больше ${min} символов`);
   }
   if (value.length > max) {
-    result.push(`Разрешено не больее ${max} символов`);
+    result.push(`Разрешено не более ${max} символов`);
   }
 };
 

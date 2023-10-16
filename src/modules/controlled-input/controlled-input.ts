@@ -1,6 +1,6 @@
 import { Block } from 'classes/block';
 import { Input, TInput } from 'components/input/input';
-import { controlledInputTmpl } from 'components/controlled-input/controlled-input.tmpl';
+import { controlledInputTmpl } from 'modules/controlled-input/controlled-input.tmpl';
 import { Label, TLabel } from 'components/label/label';
 import { ErrorComponent } from 'components/error/error';
 import { validate } from 'utils/validate';
