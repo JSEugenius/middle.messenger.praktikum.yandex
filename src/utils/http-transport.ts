@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { queryStringify } from './query-stringify';
 
 enum Method {
@@ -16,28 +17,22 @@ type Options = {
 
 type OptionsWithoutMethod = Omit<Options, 'method'>;
 
+type HTTPMethod = (url: string, options?: OptionsWithoutMethod) => Promise<unknown>;
+
 export class HTTPTransport {
-  get(url: string, options: OptionsWithoutMethod = {}) {
-    this.request(url, { ...options, method: Method.GET }, options.timeout);
-  }
+  get: HTTPMethod = (url: string, options: OptionsWithoutMethod = {}) => this.request(url, { ...options, method: Method.GET }, options.timeout);
 
-  post(url: string, options: OptionsWithoutMethod = {}) {
-    this.request(url, { ...options, method: Method.POST }, options.timeout);
-  }
+  post: HTTPMethod = (url: string, options: OptionsWithoutMethod = {}) => this.request(url, { ...options, method: Method.POST }, options.timeout);
 
-  put(url: string, options: OptionsWithoutMethod = {}) {
-    this.request(url, { ...options, method: Method.PUT }, options.timeout);
-  }
+  put: HTTPMethod = (url: string, options: OptionsWithoutMethod = {}) => this.request(url, { ...options, method: Method.PUT }, options.timeout);
 
-  delete(url: string, options: OptionsWithoutMethod = {}) {
-    this.request(url, { ...options, method: Method.DELETE }, options.timeout);
-  }
+  delete: HTTPMethod = (url: string, options: OptionsWithoutMethod = {}) => this.request(url, { ...options, method: Method.DELETE }, options.timeout);
 
   request(
     url: string,
     options: Options = { method: Method.GET },
     timeout = 5000,
-  ) {
+  ): Promise<unknown> {
     const { headers = {}, method, data } = options;
 
     return new Promise((resolve, reject) => {
