@@ -1,53 +1,82 @@
-export const PROFILE_INFO_ITEMS = [
+import imgSrc from 'media/my-avatar.jpg';
+import { ButtonType, InputName } from 'constants/enums';
+
+export const INFO_INPUTS = [
   {
-    title: 'Почта',
+    label: 'Почта',
     value: 'pochta@yandex.ru',
-    name: 'email',
+    name: InputName.EMAIL,
   },
   {
-    title: 'Логин',
-    value: 'ivanivanov',
-    name: 'login',
+    label: 'Логин',
+    value: 'jseugenius',
+    name: InputName.LOGIN,
   },
   {
-    title: 'Имя',
-    value: 'Иван',
-    name: 'first_name',
+    label: 'Имя',
+    value: 'Евгений',
+    name: InputName.FIRST_NAME,
   },
   {
-    title: 'Фамилия',
-    value: 'Иванов',
-    name: 'second_name',
+    label: 'Фамилия',
+    value: 'Новиков',
+    name: InputName.SECOND_NAME,
   },
   {
-    title: 'Имя в чате',
-    value: 'Иван',
-    name: 'display_name',
+    label: 'Имя в чате',
+    value: 'Евгений',
+    name: InputName.DISPLAY_NAME,
   },
   {
-    title: 'Телефон',
-    value: '+7 (909) 967 30 30',
-    name: 'phone',
+    label: 'Телефон',
+    value: '+79099673030',
+    name: InputName.PHONE,
   },
 ];
 
-export const PASSWORD_ITEMS = [
+const PASSWORD_INPUTS = [
   {
-    title: 'Старый пароль',
+    label: 'Старый пароль',
     value: 'пароль',
-    name: 'oldPassword',
+    name: InputName.OLD_PASSWORD,
+    type: 'password',
   },
   {
-    title: 'Новый пароль',
+    label: 'Новый пароль',
     value: 'новый пароль',
-    name: 'newPassword',
+    name: InputName.NEW_PASSWORD,
+    type: 'password',
   },
   {
-    title: 'Повторите новый пароль',
+    label: 'Повторите новый пароль',
     value: 'новый пароль',
-    name: 'repeat-password',
+    name: InputName.REPEAT_NEW_PASSWORD,
+    type: 'password',
   },
 ];
+
+export const HEADING_PROPS = {
+  avatar: imgSrc,
+  firstName: 'Евгений',
+};
+
+const BUTTON = {
+  type: ButtonType.SUBMIT,
+  text: 'Сохранить',
+};
+
+export const PROFILE_CHANGE_PROPS = {
+  info: {
+    ...HEADING_PROPS,
+    inputs: INFO_INPUTS,
+    button: BUTTON,
+  },
+  password: {
+    ...HEADING_PROPS,
+    inputs: PASSWORD_INPUTS,
+    button: BUTTON,
+  },
+};
 
 export const LINKS = [
   {

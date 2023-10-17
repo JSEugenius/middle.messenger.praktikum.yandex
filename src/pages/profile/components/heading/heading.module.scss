@@ -1,0 +1,12 @@
+@import "styles";
+
+.root {
+  @extend %flex-column-center;
+
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.title {
+  @include font(16px);
+}

@@ -8,6 +8,9 @@
 - `npm run dev` — запуск в режиме разработки.
 - `npm run start` — сборка и запуск сервера `express` с раздачей статики.
 - `npm run preview` — просмотр production сборки проекта.
+- `npm run lint` — запуск линтеров.
+- `npm run lint:ts` — запуск линтера ts.
+- `npm run lint:scss` — запуск линтера scss.
 
 ## Список страниц
 - [Главная (авторизация)](https://jseugenius-messenger.netlify.app/)
